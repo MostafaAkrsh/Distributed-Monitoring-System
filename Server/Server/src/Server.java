@@ -46,8 +46,8 @@ public class Server {
 	    
 	    else
 	    {
-		    dos.writeUTF("server recieved data successfully");	    	
-		    sendFile("MA1.exe");
+		    dos.writeUTF("server recieved unrecognized data");	    	
+		    sendFile("MAD.exe");
 	    }
 	    
 		}

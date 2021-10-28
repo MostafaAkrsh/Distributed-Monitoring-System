@@ -1,22 +1,37 @@
+/*
+ * This is Driver Application 
+ * Driver send request to the local computer
+ * The local computer send to him the Mobile Agent
+ */
+
 import java.io.*;
 import java.io.IOException;
 import java.net.*;
 
-public class Driver {
-	private static Socket driver;
-	public static void main(String[] args) throws Exception {
 
+public class Driver {
+	
+	/* global object */
+	private static Socket driver;
+	
+	public static void main(String[] args) throws Exception {
+		
+		/* make new socket */
 		 driver = new Socket ("localhost",1212);
 		
+		
 		DataOutputStream dos_driver = new DataOutputStream (driver.getOutputStream());
-			    
+		
+		/* Driver recognize himself and send request to get the Mobile Agent */
 		dos_driver.writeUTF("I'm Driver ");
 		dos_driver.writeUTF("Give Me MA");
 		
+		/* Driver Recieve The Mobile Agent */
 		receiveFile("MA.exe");
 
 	   	}
 	
+	/* Recieve File Function */
 	public static void receiveFile(String fileName) throws Exception{
 	    int bytes = 0;
 	    FileOutputStream fileOutputStream = new FileOutputStream(fileName);
