@@ -1,0 +1,19 @@
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+public class Driver {
+	public static void main(String[] args) throws IOException {
+
+		Socket Driver = new Socket ("localhost",1212);
+		
+		DataOutputStream dos_traffic = new DataOutputStream (Driver.getOutputStream());
+	
+			    
+		dos_traffic.writeUTF("Hi there I'm traffic");
+		dos_camera.writeUTF("Hi there I'm camera");
+		dos_sensor.writeUTF("Hi there I'm sensor");
+	    
+	    System.out.print(st);
+	}
+}

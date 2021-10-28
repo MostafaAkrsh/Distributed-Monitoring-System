@@ -1,0 +1,21 @@
+
+public class Server {
+
+	public static void main(String[] args) {
+
+		ServerSocket server = new ServerSocket(1111);
+
+		Socket node = server.accept();
+		
+		DataOutputStream dos = new DataOutputStream(node.getOutputStream());
+		DataInputStream dis = new DataInputStream(node.getInputStream());
+		
+		
+		dos.writeUTF("Hi there i'm server");
+		
+	    String st = new String(dis.readUTF());
+	    
+	    System.out.print(st);
+	}
+
+}

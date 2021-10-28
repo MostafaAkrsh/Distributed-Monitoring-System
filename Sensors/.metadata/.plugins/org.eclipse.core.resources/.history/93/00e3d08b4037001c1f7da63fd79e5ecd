@@ -1,0 +1,20 @@
+import java.io.*;
+import java.net.*;
+
+public class Sensor {
+
+	public static void main(String[] args) throws IOException {
+
+	Socket trafficNode = new Socket ("localhost",1212);
+	Socket cameraNode = new Socket ("localhost",1212);
+	Socket sensorNode = new Socket ("localhost",1212);
+		
+	DataOutputStream dos_traffic = new DataOutputStream (trafficNode.getOutputStream());
+	DataOutputStream dos_camera = new DataOutputStream (cameraNode.getOutputStream());
+	DataOutputStream dos_sensor = new DataOutputStream (sensorNode.getOutputStream());
+		    
+	
+	
+	}
+
+}

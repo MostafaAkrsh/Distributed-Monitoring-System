@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Computer {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
+
+		Socket ConnectingToServer = new Socket("localhost", 1111);
+
+		ServerSocket ComputerPort = new ServerSocket(1212);
+
+		while (true) {
+			// Delegate to new thread to connection to server
+
+			ComputerHandlerSend S = new ComputerHandlerSend(ConnectingToServer);
+			S.start();
+
+			Socket node = ComputerPort.accept();
+
+			ComputerHandlerRecieve N = new ComputerHandlerRecieve(node);
+			N.start();
+			N.join();
+
+		}
+
+	}
+
+}

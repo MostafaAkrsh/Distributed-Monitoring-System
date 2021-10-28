@@ -1,0 +1,16 @@
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+public class Driver {
+	public static void main(String[] args) throws IOException {
+
+		Socket Driver = new Socket ("localhost",1212);
+		
+	    DataInputStream dis = new DataInputStream (Driver.getInputStream());
+	
+	    String st = new String(dis.readUTF());
+	    
+	    System.out.print(st);
+	}
+}

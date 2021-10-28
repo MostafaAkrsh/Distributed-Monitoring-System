@@ -1,0 +1,31 @@
+import java.net.*;
+import java.io.*;
+
+
+public class Computer {
+
+	public static void main(String[] args) {
+		
+		Socket ConnectingToServer = new Socket ("localhost",1111);
+
+		while(true)
+		{
+			
+		}
+		
+
+		
+		DataOutputStream dos = new DataOutputStream(server.getOutputStream());
+		DataInputStream dis = new DataInputStream(server.getInputStream());
+			
+				
+		String st = new String(dis.readUTF());
+		    
+		System.out.print(st);
+			
+		dos.writeUTF("Hi there i'm computer");
+			
+		while(true);
+	}
+
+}

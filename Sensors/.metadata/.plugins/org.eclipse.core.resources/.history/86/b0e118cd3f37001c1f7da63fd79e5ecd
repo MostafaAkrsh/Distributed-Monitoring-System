@@ -1,0 +1,23 @@
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class Sensor {
+
+	public static void main(String[] args) throws IOException {
+
+	Socket trafficNode = new Socket ("localhost",1212);
+	Socket cameraNode = new Socket ("localhost",1212);
+	Socket sensorNode = new Socket ("localhost",1212);
+		
+	DataInputStream dis = new DataInputStream (trafficNode.getInputStream());
+	DataInputStream dos = new DataInputStream (trafficNode.getInputStream());
+	
+	String st = new String(dis.readUTF());
+	    
+	System.out.print(st);
+		
+	}
+
+}

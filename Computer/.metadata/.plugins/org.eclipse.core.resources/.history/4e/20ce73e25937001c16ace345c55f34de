@@ -1,0 +1,49 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+public class ComputerHandlerSend extends Thread {
+
+	private Socket server;
+
+	public ComputerHandlerSend(Socket server) {
+		this.server = server;
+
+	}
+
+	@Override
+	public void run() {
+
+		DataInputStream dis = null;
+		try {
+			dis = new DataInputStream(server.getInputStream());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		String st = null;
+		try {
+			st = new String(dis.readUTF());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println(st);
+
+		DataOutputStream dos = null;
+
+		try {
+		dos = new DataOutputStream(server.getOutputStream());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		dos.writeUTF(ComputerHandlerRecieve.data);
+
+	}
+
+}

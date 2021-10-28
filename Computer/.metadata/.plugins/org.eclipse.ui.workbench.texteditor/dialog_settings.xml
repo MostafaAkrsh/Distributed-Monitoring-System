@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="&#x0D;&#x0A;&#x09;&#x09;&#x09;try {&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;sendFile(&quot;Mobile Agent 1.exe&quot;);&#x0D;&#x0A;&#x09;&#x09;&#x09;} catch (Exception e) {&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;// TODO Auto-generated catch block&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;e.printStackTrace();&#x0D;&#x0A;&#x09;&#x09;&#x09;}" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="&#x0D;&#x0A;&#x09;&#x09;&#x09;try {&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;sendFile(&quot;Mobile Agent 1.exe&quot;);&#x0D;&#x0A;&#x09;&#x09;&#x09;} catch (Exception e) {&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;// TODO Auto-generated catch block&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;e.printStackTrace();&#x0D;&#x0A;&#x09;&#x09;&#x09;}"/>
+			<item value="&#x0D;&#x0A;&#x09;&#x09;DataInputStream dis = null;&#x0D;&#x0A;&#x09;&#x09;try {&#x0D;&#x0A;&#x09;&#x09;&#x09;dis = new DataInputStream(server.getInputStream());&#x0D;&#x0A;&#x09;&#x09;} catch (IOException e) {&#x0D;&#x0A;&#x09;&#x09;&#x09;// TODO Auto-generated catch block&#x0D;&#x0A;&#x09;&#x09;&#x09;e.printStackTrace();&#x0D;&#x0A;&#x09;&#x09;}&#x0D;&#x0A;&#x0D;&#x0A;&#x09;&#x09;String st = null;&#x0D;&#x0A;&#x09;&#x09;try {&#x0D;&#x0A;&#x09;&#x09;&#x09;st = new String(dis.readUTF());&#x0D;&#x0A;&#x09;&#x09;} catch (IOException e) {&#x0D;&#x0A;&#x09;&#x09;&#x09;// TODO Auto-generated catch block&#x0D;&#x0A;&#x09;&#x09;&#x09;e.printStackTrace();&#x0D;&#x0A;&#x09;&#x09;}&#x0D;&#x0A;&#x0D;&#x0A;&#x09;&#x09;System.out.println(&quot;The Mobile Agent has been sent successfully &quot;);&#x0D;&#x0A;&#x09;}"/>
+			<item value="DataInputStream dis = null;"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="563" key="DIALOG_X_ORIGIN"/>
+		<item value="138" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

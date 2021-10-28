@@ -1,0 +1,26 @@
+import java.io.IOException;
+import java.net.*;
+import java.io.*;
+
+public class Server {
+
+	public static void main(String[] args) throws IOException {
+
+		ServerSocket server = new ServerSocket(1111);
+		
+		while(true){
+			
+		Socket Computer = server.accept();
+		
+		DataOutputStream dos = new DataOutputStream(Computer.getOutputStream());
+		DataInputStream dis = new DataInputStream(Computer.getInputStream());
+		
+		dos.writeUTF("Hi there i'm server");
+		
+	    String st = new String(dis.readUTF());
+	    
+	    System.out.print(st);
+}
+	}
+
+}

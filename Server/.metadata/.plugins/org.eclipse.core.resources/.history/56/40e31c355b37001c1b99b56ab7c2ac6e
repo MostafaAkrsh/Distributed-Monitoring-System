@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.net.*;
+import java.io.*;
+
+public class Server {
+
+	public static void main(String[] args) throws IOException {
+
+		ServerSocket server = new ServerSocket(1111);
+		
+		Socket Computer = server.accept();
+		
+		dos.writeUTF("\n You're connected to the server \n");
+
+		while(true){
+			
+		
+		DataOutputStream dos = new DataOutputStream(Computer.getOutputStream());
+		DataInputStream dis = new DataInputStream(Computer.getInputStream());
+		
+		dos.writeUTF("recieved data successfully");
+
+	    String st = new String(dis.readUTF());
+	    
+	    System.out.print(st);
+}
+	}
+
+}

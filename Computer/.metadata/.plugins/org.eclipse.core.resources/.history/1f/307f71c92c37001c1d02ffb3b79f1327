@@ -1,0 +1,35 @@
+import java.net.*;
+import java.io.*;
+
+public class Computer {
+
+	public static void main(String[] args) throws IOException{
+		
+		Socket ConnectingToServer = new Socket ("localhost",1111);
+		//Delegate to new thread
+		
+		ServerSocket ComputerPort = new ServerSocket(1111);
+
+		
+		while(true)
+		{
+			Socket node = ComputerPort.accept();
+			//Delegate to new Thread
+			DataOutputStream dos = new DataOutputStream(node.getOutputStream());
+			dos.writeUTF("Hi there i'm computer");
+
+		}
+		
+
+		
+			
+				
+		String st = new String(dis.readUTF());
+		    
+		System.out.print(st);
+			
+			
+		while(true);
+	}
+
+}
