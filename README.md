@@ -13,5 +13,6 @@ Typical Scenario
 7.	
 ## System Architecture
 ![Image](System Arch.png)
+
 ## The ALP Diagram
 ![Image](ALP.png)
