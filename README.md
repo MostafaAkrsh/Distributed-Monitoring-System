@@ -12,7 +12,7 @@ Typical Scenario
 6.	The mobile agent application gives instructions and suggestions to the driver.
 
 ## System Architecture
-![Image](System Arch.png)
+![Image](System%20Arch.png)
 
 ## The ALP Diagram
 ![Image](ALP.png)
