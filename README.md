@@ -10,7 +10,7 @@ Typical Scenario
 4.	The server processes the all data and Mobile Agent to the computer.
 5.	The computer takes the recommendations and gives the driver’s phone a mobile agent program have the recommendation for the driver.
 6.	The mobile agent application gives instructions and suggestions to the driver.
-7.	
+
 ## System Architecture
 ![Image](System Arch.png)
 
